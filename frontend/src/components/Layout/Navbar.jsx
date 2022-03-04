@@ -4,10 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../Button";
 import CustomeNavLink from "./CustomeNavLink";
 
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState(window.location.pathname);
-  console.log(tab);
+
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   return (
     <div className="flex justify-between items-center w-[90%] h-[13vh] mx-auto z-20">
@@ -47,24 +50,39 @@ const Navbar = () => {
 
       {/* right side */}
       <div className="flex justify-end w-1/2 xl:w-1/2">
-        <Button
-          label="Login"
-          btnType="outline"
-          customeStyle="mr-7"
-          btnWidth={70}
-          onClick={() => {
-            navigate("/login");
-            setTab("/login");
-          }}
-        />
-        <Button
-          label="Sign Up"
-          btnWidth={70}
-          onClick={() => {
-            navigate("/register");
-            setTab("/register");
-          }}
-        />
+        {isAuthenticated ? (
+          <Button
+            label="Dashboard"
+            btnType="outline"
+            customeStyle="mr-7"
+            btnWidth={70}
+            onClick={() => {
+              navigate("/dashboard");
+              setTab("/dashboard");
+            }}
+          />
+        ) : (
+          <>
+            <Button
+              label="Login"
+              btnType="outline"
+              customeStyle="mr-7"
+              btnWidth={70}
+              onClick={() => {
+                navigate("/login");
+                setTab("/login");
+              }}
+            />
+            <Button
+              label="Sign Up"
+              btnWidth={70}
+              onClick={() => {
+                navigate("/register");
+                setTab("/register");
+              }}
+            />
+          </>
+        )}
       </div>
     </div>
   );

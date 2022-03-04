@@ -1,18 +1,26 @@
 import React from "react";
 import "./AnimatedFormField.css";
 
-const AnimatedFormField = ({ inputType, labelName, autoComplete }) => {
+const AnimatedFormField = ({
+  inputType,
+  labelName,
+  autoComplete,
+  setOnChangeValue,
+  value,
+}) => {
   return (
     <div className="flex relative h-[40px] group mb-7">
       <input
         type={inputType}
+        value={value}
+        onChange={setOnChangeValue}
         placeholder=" "
         className="form__input w-full border-2 border-gray-300 rounded-md  outline-none px-4 group focus-within:border-green-500
         hover:border-gray-400
         bg-transparent
         
         "
-        autocomplete={autoComplete ? autoComplete : "off"}
+        autoComplete={autoComplete ? autoComplete : "off"}
       />
       <label
         htmlFor={inputType}
