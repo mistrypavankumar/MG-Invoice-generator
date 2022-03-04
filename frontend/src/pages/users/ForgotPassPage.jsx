@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedFormField from "../components/pages/login_components/AnimatedFormField";
+import AnimatedFormField from "../../components/pages/login_components/AnimatedFormField";
 
 const ForgotPassPage = () => {
   return (
