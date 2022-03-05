@@ -6,6 +6,7 @@ import Loader from "../../components/Loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from "react-alert";
 import { clearErrors, register } from "../../actions/userAction";
+import MetaData from "../../components/MetaData";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -23,9 +24,7 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const redirect = location.search
-    ? location.search.split("=")[1]
-    : "/dashboard";
+  const redirect = location.search ? location.search.split("=")[1] : "/invoice";
 
   useEffect(() => {
     if (error) {
@@ -54,6 +53,7 @@ const RegisterPage = () => {
         <Loader />
       ) : (
         <div className="w-full h-[80vh] flex justify-center items-center">
+          <MetaData title="Sign Up" />
           <div className=" w-full flex align-center justify-center">
             <form
               className="w-[90%] md:w-[35%] px-4 pt-8 pb-5 mx-auto shadow-md h-auto rounded-md"
