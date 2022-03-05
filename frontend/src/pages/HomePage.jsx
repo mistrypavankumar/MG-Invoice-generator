@@ -1,9 +1,11 @@
 import React from "react";
 import invoiceImg from "../assets/invoice-img1.svg";
+import MetaData from "../components/MetaData";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col md:flex-row w-[90%] mx-auto h-[80vh]">
+      <MetaData />
       <div className="md:w-1/2 mt-5 md:mt-0 flex flex-col justify-center align-center gap-y-2">
         <h1 className="text-primaryDarkBlue text-4xl md:text-5xl font-bold">
           Simplest to Generate

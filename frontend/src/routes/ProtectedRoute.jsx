@@ -8,7 +8,11 @@ const ProtectedRoute = ({ element: Element, ...rest }) => {
     <>
       {!loading && (
         <>
-          {isAuthenticated ? <Outlet {...rest} /> : <Navigate to="/login" />}{" "}
+          {isAuthenticated ? (
+            <Outlet {...rest} />
+          ) : (
+            <Navigate replace to="/login" />
+          )}{" "}
         </>
       )}
     </>

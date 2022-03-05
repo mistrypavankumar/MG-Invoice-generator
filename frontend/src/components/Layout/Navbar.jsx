@@ -34,9 +34,9 @@ const Navbar = () => {
             menuName="Home"
           />
           <CustomeNavLink
-            pathLink="/invoicing"
+            pathLink="/invoice"
             tab={tab}
-            onClick={() => setTab("/invoicing")}
+            onClick={() => setTab("/invoice")}
             menuName="Invoicing"
           />
           <CustomeNavLink
@@ -57,8 +57,8 @@ const Navbar = () => {
             customeStyle="mr-7"
             btnWidth={70}
             onClick={() => {
-              navigate("/dashboard");
-              setTab("/dashboard");
+              navigate("/invoice");
+              setTab("/invoice");
             }}
           />
         ) : (
