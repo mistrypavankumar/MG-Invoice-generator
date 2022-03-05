@@ -18,7 +18,7 @@ function App() {
   });
 
   return (
-    <Router>
+    <>
       <Navbar />
 
       <Routes>
@@ -34,7 +34,7 @@ function App() {
         {/* If router is not specified then show below page */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
