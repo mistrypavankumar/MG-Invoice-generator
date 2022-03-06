@@ -29,7 +29,7 @@ const SideNavbar = ({ companyName }) => {
     <div
       className={`${
         toggle ? "w-[210px]" : "w-[60px]"
-      } h-screen transition-all duration-500 bg-primaryDarkBlue relative overflow-hidden`}
+      } h-screen transition-all duration-500 bg-primaryDarkBlue overflow-hidden z-50 left-0 bottom-0 fixed`}
     >
       <div className="flex justify-center items-center gap-x-2 overflow-hidden pb-3 border-b-2 border-green-500 border-opacity-20 w-[95%] mx-auto  mt-10">
         <div
