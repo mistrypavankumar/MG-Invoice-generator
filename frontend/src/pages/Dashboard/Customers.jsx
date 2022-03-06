@@ -5,7 +5,7 @@ import MetaData from "../../components/MetaData";
 
 const Customers = () => {
   return (
-    <div className="absolute top-0 flex bg-white  w-full h-full">
+    <div className="flex w-full h-full">
       <MetaData title="Customers" reverse={true} />
       <div className="left-0 bottom-0 h-full fixed">
         <SideNavbar companyName={"Company Name"} />

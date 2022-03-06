@@ -22,8 +22,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route exact path="/login" element={<LoginPage />} />
