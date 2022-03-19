@@ -18,7 +18,7 @@ import Products from "./pages/Dashboard/Products";
 function App() {
   useEffect(() => {
     store.dispatch(loadUser());
-  });
+  }, []);
 
   return (
     <>
