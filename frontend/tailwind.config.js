@@ -12,6 +12,10 @@ module.exports = {
         secondaryDark: "#0e8f99",
         blackOverlay: "rgba(0, 0 ,0 ,0.7)",
       },
+      borderWidth: {
+        3: "3px",
+      },
+
       borderColor: {
         primaryBlue: "#022f47",
         primaryDarkBlue: "#021e34",

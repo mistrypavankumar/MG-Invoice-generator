@@ -5,3 +5,7 @@
   font-size: 0.8rem;
   z-index: 0;
 }
+
+.form__input:placeholder-show {
+  color: gray;
+}
