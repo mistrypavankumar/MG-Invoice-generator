@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
 exports.connectDatabase = () => {
+  mongoose.set("strictQuery", true);
   mongoose
-    .connect(process.env.MONGO_DB_URI, {})
+    .connect(process.env.MONGO_DB_URI)
     .then(() => {
       console.log("Connection to database is successful");
     })
