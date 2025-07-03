@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Layout/Navbar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/users/LoginPage";
 import RegisterPage from "./pages/users/RegisterPage";
@@ -14,6 +13,8 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 import Customers from "./pages/Dashboard/Customers";
 import Settings from "./pages/Dashboard/Settings";
 import Products from "./pages/Dashboard/Products";
+import Invoice from "./pages/Dashboard/Invoice";
+import Quotation from "./pages/Dashboard/Quotation";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,8 @@ function App() {
         <Route exact path="/login" element={<LoginPage />} />
         <Route path="/login/forgotpassword" element={<ForgotPassPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/my-invoice" element={<Invoice />} />
+        <Route path="/my-quotation" element={<Quotation />} />
 
         <Route path="/" element={<ProtectedRoute />}>
           <Route path="/invoice" element={<Dashboard />} />

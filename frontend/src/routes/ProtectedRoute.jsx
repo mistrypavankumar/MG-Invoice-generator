@@ -12,7 +12,7 @@ const ProtectedRoute = ({ element: Element, ...rest }) => {
             <Outlet {...rest} />
           ) : (
             <Navigate replace to="/login" />
-          )}{" "}
+          )}
         </>
       )}
     </>
